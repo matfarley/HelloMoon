@@ -12,6 +12,11 @@ public class HelloMoonFragment extends Fragment {
 	private Button mStopButton;
 	private AudioPlayer mPlayer = new AudioPlayer();
 	
+	@Override
+	public void onCreate(Bundle savedInstanceState){
+		super.onCreate(savedInstanceState);
+		setRetainInstance(true); //Destroyed and recreated on rotation by default
+	}
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup parent,
